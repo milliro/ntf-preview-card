@@ -1,0 +1,133 @@
+/* root */
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 40%);
+    --cyan-bg: hsl(178, 100%, 40%);
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* reset */
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* body */
+body {
+    display: flex;
+    font-size: .9rem;
+    line-height: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    background: var(--very-dark-blue-main);
+}
+
+/* format color */
+.main--content > a, .container--credits p > a, .attribution a{
+    color: var(--white);
+    transition: .2s;
+}
+
+.main--content > a:hover, .container--credits p > a:hover, .attribution a:hover{
+    color: var(--cyan);
+}
+
+.info--2, .main--content > p, .container--credits p, .attribution{
+    color: var(--soft-blue);
+}
+
+/* main */
+main {
+    max-width: 300px;
+    background: var(--very-dark-blue-card);
+    padding: 1.25rem;
+    border-radius: .625rem;
+}
+
+/* main content */
+.main--img{
+    border-radius: .625rem;
+    overflow: hidden;
+    background-image: url(../images/icon-view.svg);
+    background-color: var(--cyan-bg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main--img img {
+    transition: .2s;
+}
+
+.main--img img:hover{
+    opacity: .2;
+}
+
+.main--content > a{
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 1.25rem 0;
+}
+
+.main--content > p {
+    font-weight: 300;
+    line-height: 1.4;
+    margin: .625rem 0;
+}
+
+.container--info {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    border-bottom: 2px solid rgba(139, 172, 218, .1);
+     
+}
+
+.info--item {
+    display: flex;
+    align-items: center;
+    gap: .3125rem;
+}
+
+.info--1 {
+    color: var(--cyan);
+}
+
+/* credits */
+.container--credits {
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+    padding-top: 1.25rem;
+}
+
+.credits--img {
+    max-width: 35px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+/* footer */
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    position: absolute; 
+    bottom: 5px;
+}
